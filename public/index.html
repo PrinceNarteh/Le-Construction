@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Welcome to Nailed Construction Solutions, The job Is Under Control!, A leading provider of comprehensive solutions for all your construction company needs. Explore a wide range of services, including [Room Scanning, Instant Floor Plan Generation, Claims, Project management, Bids, Sub-contractor management, Payments], designed to meet your unique requirements. Our dedicated team of experts ensures that every aspect of your project is under control, from planning to execution. Discover how we can help you achieve success in Construction and Real Estate Industry."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Nailed Construction Solutions</title>
+    <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhxiV3IiFr2KzXokhStpsfmD-E3Kw-7Zk&libraries=places"
+    async
+    defer
+  ></script> -->
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhxiV3IiFr2KzXokhStpsfmD-E3Kw-7Zk&libraries=geometry,places&callback=initMap"
+      async
+      defer
+    ></script>
+
+      <!-- Declare google object globally -->
+  <script>
+    window.google = window.google || {};
+  </script>
+  
+  </head>
+  <body>
+    <noscript>Powered by Nailed</noscript>
+    <div id="root"></div>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+
+              // Set the default map options
+              const mapOptions = {
+                center: userLocation,
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.SATELLITE,
+              };
+
+              const map = new google.maps.Map(
+                document.getElementById("map"),
+                mapOptions
+              );
+            },
+            function (error) {
+              console.error("Error getting user location:", error);
+            }
+          );
+        } else {
+          console.error("Geolocation is not supported by this browser.");
+        }
+      }
+    </script>
+  </body>
+</html>

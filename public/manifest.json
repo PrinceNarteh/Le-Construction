@@ -1,0 +1,26 @@
+{
+  "short_name": "Nailed",
+  "name": "Nailed Construction Solutions",
+  "description": "Welcome to Nailed Construction Solutions, The job Is Under Control!, A leading provider of comprehensive solutions for all your construction company needs. Explore a wide range of services, including [Room Scanning, Instant Floor Plan Generation, Claims, Project management, Bids, Sub-contractor management, Payments], designed to meet your unique requirements. Our dedicated team of experts ensures that every aspect of your project is under control, from planning to execution. Discover how we can help you achieve success in Construction and Real Estate Industry.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
